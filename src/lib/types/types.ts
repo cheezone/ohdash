@@ -132,3 +132,10 @@ export type MergeDeepObjects<A extends readonly [...unknown[]]> = A extends [
 ]
   ? SpreadTwo<L, MergeDeepObjects<R>>
   : unknown;
+
+/**
+ * 假值。
+ *
+ * @description 包括：`false`, `0`, `''`, `null`, `undefined`, `NaN`
+ */
+export type Falsy = false | 0 | "" | null | undefined | typeof NaN;

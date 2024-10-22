@@ -38,3 +38,4 @@ export function unique<TElement>(
 
   return uniqueArray;
 }
+export { unique as 去重 };

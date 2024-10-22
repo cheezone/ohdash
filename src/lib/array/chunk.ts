@@ -37,3 +37,5 @@ export function chunk<TElement>(
   // 返回分割后的数组
   return result;
 }
+
+export { chunk as 分块 };

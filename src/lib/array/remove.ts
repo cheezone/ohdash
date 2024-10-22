@@ -32,10 +32,18 @@ export function remove<T>(
   predicate: (value: T, index: number, array: T[]) => boolean
 ): T[];
 
+export function remove<T>(array: T[]): [];
+
 export function remove<T>(
   array: T[],
-  predicate: (value: T, index: number, array: T[]) => boolean
+  predicate?: (value: T, index: number, array: T[]) => boolean
 ): T[] {
+  if (!predicate) {
+    // 如果没有提供 predicate 参数，则清空数组并返回空数组
+    array.splice(0, array.length);
+    return array;
+  }
+
   // 反向遍历数组，从后往前删除，以防止索引错位
   for (let i = array.length - 1; i >= 0; i--) {
     if (predicate(array[i], i, array)) {
@@ -47,3 +55,5 @@ export function remove<T>(
   // 返回删除后的数组
   return array;
 }
+
+export { remove as 删除元素 };
