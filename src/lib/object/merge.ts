@@ -1,10 +1,10 @@
+import { isPlainObject } from "../types/check";
 import {
   GenericObject,
   ArrayMinLength,
   MergeDeepObjects,
   PlainObject,
-  isPlainObject,
-} from "../types";
+} from "../types/types";
 
 /**
  * 合并并返回新的对象。
