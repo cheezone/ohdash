@@ -139,3 +139,8 @@ export type MergeDeepObjects<A extends readonly [...unknown[]]> = A extends [
  * @description 包括：`false`, `0`, `''`, `null`, `undefined`, `NaN`
  */
 export type Falsy = false | 0 | "" | null | undefined | typeof NaN;
+
+export interface List<T> {
+  [index: number]: T;
+  length: number;
+}

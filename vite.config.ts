@@ -12,6 +12,7 @@ export default defineConfig({
   ],
   test: {
     coverage: {
+      include: ["**/lib/**/*.ts"],
       exclude: ["**/index.ts", "dist/**"],
     },
   },
