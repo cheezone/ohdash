@@ -1,7 +1,7 @@
 # Object
 
 - [ ] entries
-- [ ] keys
+- [x] keys
 - [ ] values
 - [ ] forEach
 - [ ] map
