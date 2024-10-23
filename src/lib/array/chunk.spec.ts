@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { chunk } from "../../lib/array/chunk";
+import { chunk } from "./chunk";
 
 // 测试 chunk 函数
 describe("chunk 函数测试", () => {

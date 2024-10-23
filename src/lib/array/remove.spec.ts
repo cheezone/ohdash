@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { remove } from "../../lib/array/remove";
+import { remove } from "./remove";
 
 describe("remove 函数", () => {
   it("应该删除数组中的偶数", () => {

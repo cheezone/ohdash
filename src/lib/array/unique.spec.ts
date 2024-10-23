@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { unique } from "../../lib/array/unique";
+import { unique } from "./unique";
 
 describe("unique 函数", () => {
   it("应该正确去除重复的数字", () => {

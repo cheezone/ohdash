@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { forElse } from "../../lib/array/forElse";
+import { forElse } from "./forElse";
 
 /**
  * forElse 测试

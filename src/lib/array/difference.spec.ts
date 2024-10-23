@@ -1,9 +1,5 @@
 import { describe, it, expect } from "vitest";
-import {
-  differenceBy,
-  difference,
-  differenceWith,
-} from "../../lib/array/difference";
+import { differenceBy, difference, differenceWith } from "./difference";
 
 describe("differenceBy 根据函数比较返回不同的元素", () => {
   it("根据 Math.floor 比较返回不同的元素", () => {

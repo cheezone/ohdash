@@ -1,5 +1,7 @@
 import { describe, it, expect } from "vitest";
-import { merge, toMerged } from "../../lib/object/merge";
+import { merge, toMerged } from "./merge";
+
+// FIX: 类型错误
 
 describe("单元测试：merge 函数", () => {
   it("应合并嵌套对象", () => {

@@ -8,12 +8,21 @@ export default defineConfig({
   plugins: [
     dts({
       entryRoot: "src/lib",
+      exclude: [
+        "**/*.{bench,benchmark}.?(c|m)[jt]s?(x)",
+        "**/*.{test,spec}.?(c|m)[jt]s?(x)",
+      ],
     }),
   ],
   test: {
+    include: ["**/lib/**/*.{test,spec}.?(c|m)[jt]s?(x)"],
     coverage: {
-      include: ["**/lib/**/*.ts"],
-      exclude: ["**/index.ts", "dist/**"],
+      include: ["**/lib/**"],
+      exclude: [
+        "**/index.ts",
+        "**/*.{bench,benchmark}.?(c|m)[jt]s?(x)",
+        "**/*.{test,spec}.?(c|m)[jt]s?(x)",
+      ],
     },
   },
   build: {
@@ -23,6 +32,7 @@ export default defineConfig({
       fileName: (format) => `ohdash.${format}.js`, // 根据格式生成文件名
       formats: ["es"],
     },
+
     sourcemap: true,
     rollupOptions: {
       output: {

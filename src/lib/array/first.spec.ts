@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { first, head } from "../../lib/array/first";
+import { first, head } from "./first";
 import _ from "lodash"; // 引入 lodash 进行对比测试
 
 describe("first function", () => {

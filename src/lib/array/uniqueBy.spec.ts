@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { uniqueBy } from "../../lib/array/uniqueBy";
+import { uniqueBy } from "./uniqueBy";
 
 describe("uniqueBy 函数", () => {
   it("应该根据 id 去重对象数组", () => {

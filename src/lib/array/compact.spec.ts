@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { compact } from "../../lib/array/compact";
+import { compact } from "./compact";
 
 describe("compact 删除虚假值的数组测试", () => {
   it("应删除数组中的所有虚假值", () => {

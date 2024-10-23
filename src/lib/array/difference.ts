@@ -1,13 +1,13 @@
 /**
- * 根据提供的函数，返回第一个数组中与其他数组的不同元素。
+ * 根据提供的函数，返回第一个数组中不存在于第二个数组中的元素。
  *
  * @description
- * 通过自定义函数进行比较，返回第一个数组中不同于其他数组的元素。适合处理复杂数据类型的比较。
+ * 通过对数组元素应用指定的函数，将第一个数组中的元素与第二个数组中的元素进行比较，返回第一个数组中不存在于第二个数组中的元素。
  *
- * @param array 需要处理的第一个数组
- * @param values 需要比较的数组
- * @param iteratee 比较函数，通常用于处理复杂数据类型
- * @returns 返回过滤后的数组，包含与其他数组不同的元素
+ * @param array 第一个数组
+ * @param values 第二个数组
+ * @param iteratee 用于转换数组元素的函数
+ * @returns 返回第一个数组中不存在于第二个数组中的元素组成的新数组
  * @template T 数组元素的类型
  *
  * @example
@@ -23,6 +23,8 @@ export function differenceBy<T>(
   const transformedValues = values.map(iteratee);
   return array.filter((item) => !transformedValues.includes(iteratee(item)));
 }
+
+export { differenceBy as 求差集按条件 };
 
 /**
  * 返回第一个数组与其他数组中不同的元素。
@@ -45,7 +47,7 @@ export function difference<T>(array: T[], ...values: T[][]): T[] {
   return array.filter((item) => !allValues.includes(item));
 }
 
-export { difference as 不同 };
+export { difference as 求差集 };
 
 /**
  * 通过自定义比较函数返回第一个数组中与其他数组的不同元素。
@@ -77,3 +79,5 @@ export function differenceWith<T>(
     (item) => !values.some((value) => comparator(item, value))
   );
 }
+
+export { differenceWith as 求差集按比较器 };

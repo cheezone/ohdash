@@ -21,4 +21,4 @@ export function last<T>(array: readonly T[] | null | undefined): T | undefined {
 }
 
 // 别名导出
-export { last as 最后 };
+export { last as 最后一个 };

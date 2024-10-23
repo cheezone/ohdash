@@ -12,7 +12,7 @@
  */
 export function uniqueBy<TElement>(
   array: readonly TElement[],
-  iteratee: (element: TElement) => any
+  iteratee: (element: TElement) => unknown
 ): TElement[] {
   const seen = new Set(); // 存储已有的值
   const uniqueArray: TElement[] = []; // 去重后的数组
