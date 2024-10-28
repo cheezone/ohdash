@@ -1,5 +1,5 @@
 import { describe, it, expectTypeOf } from "vitest";
-import { keys } from "./keys";
+import { keys, 键名 } from "./keys";
 import lodash from "lodash";
 import { ref } from "vue"; // 引入 Vue 的相关函数
 
@@ -188,3 +188,5 @@ describe("keys 类型测试", () => {
     expectTypeOf(keys(refValue)).toMatchTypeOf<string[]>();
   });
 });
+
+键名;

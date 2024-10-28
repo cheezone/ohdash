@@ -22,9 +22,9 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npm run generate-barrels && tsc && vite build",
     "preview": "vite preview",
-    "generate-barrels": "barrelsby --delete --directory ./src/lib  --location top"
+    "generate-barrels": "barrelsby -c barrelsby.json"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.12",

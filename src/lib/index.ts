@@ -3,9 +3,16 @@
  */
 
 export * from "./array/chunk";
+export * from "./array/compact";
+export * from "./array/difference";
+export * from "./array/first";
+export * from "./array/forElse";
+export * from "./array/last";
 export * from "./array/remove";
 export * from "./array/unique";
 export * from "./array/uniqueBy";
+export * from "./object/entries";
+export * from "./object/keys";
 export * from "./object/merge";
 export * from "./object/omit";
 export * from "./types/check";

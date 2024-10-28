@@ -1,0 +1,16 @@
+{
+    "directory": [
+        "./src/lib"
+    ],
+    "delete": true,
+    "location": "top",
+    "include": [
+        "src/lib/.*\\.ts$"
+    ],
+    "exclude": [
+        "spec.ts$",
+        "bench.ts$",
+        "dist",
+        "node_modules"
+    ]
+}
