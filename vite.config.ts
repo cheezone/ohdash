@@ -7,7 +7,7 @@ import dts from "vite-plugin-dts";
 export default defineConfig({
   plugins: [
     dts({
-      entryRoot: "src/lib",
+      entryRoot: "lib",
       exclude: [
         "**/*.{bench,benchmark}.?(c|m)[jt]s?(x)",
         "**/*.{test,spec}.?(c|m)[jt]s?(x)",
@@ -15,9 +15,9 @@ export default defineConfig({
     }),
   ],
   test: {
-    include: ["**/lib/**/*.{test,spec}.?(c|m)[jt]s?(x)"],
+    include: ["lib/**/*.{test,spec}.?(c|m)[jt]s?(x)"],
     coverage: {
-      include: ["**/lib/**"],
+      include: ["lib/**"],
       exclude: [
         "**/index.ts",
         "**/*.{bench,benchmark}.?(c|m)[jt]s?(x)",
@@ -27,7 +27,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: resolve(__dirname, "src/lib/index.ts"),
+      entry: resolve(__dirname, "lib/index.ts"),
       name: "ohdash",
       fileName: (format) => `ohdash.${format}.js`, // 根据格式生成文件名
       formats: ["es"],
@@ -40,7 +40,7 @@ export default defineConfig({
         format: "es",
         entryFileNames: "[name].js", // 输出文件名
         preserveModules: true, // 保持模块结构
-        preserveModulesRoot: "src/lib", // 保留模块根目录
+        preserveModulesRoot: "lib", // 保留模块根目录
       },
     },
   },

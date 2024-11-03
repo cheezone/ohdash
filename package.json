@@ -21,9 +21,7 @@
     "typescript"
   ],
   "scripts": {
-    "dev": "vite",
     "build": "npm run generate-barrels && tsc && vite build",
-    "preview": "vite preview",
     "generate-barrels": "barrelsby -c barrelsby.json"
   },
   "devDependencies": {
